@@ -18,6 +18,7 @@ namespace Competition2.Models
         {
             DisplayBooks.Add(book);
         }
+
     }
 
 }
