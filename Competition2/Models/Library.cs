@@ -8,5 +8,16 @@ namespace Competition2.Models
     { 
         public List<People> DisplayPatrons { get; set; } = new List<People>();
         public List<Book> DisplayBooks { get; set; } = new List<Book>();
+
+        public void AddPatron(People patron)
+        {
+            DisplayPatrons.Add(patron);
+        }   
+
+        public void AddBook(Book book)
+        {
+            DisplayBooks.Add(book);
+        }
     }
+
 }
