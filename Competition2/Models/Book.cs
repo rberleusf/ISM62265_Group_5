@@ -18,15 +18,15 @@ namespace Competition2.Models
 
         public void BorrowBook()
         {
-            // if (AvailableCopies > 0)
-            // {
-            //     AvailableCopies--;
-            //     Console.WriteLine($"You have borrowed '{Title}' by {Author}.");
-            // }
-            // else
-            // {
-            //     Console.WriteLine($"Sorry, '{Title}' is currently unavailable.");
-            // }
+            if (AvailableCopies > 0)
+            {
+                AvailableCopies--;
+                Console.WriteLine($"You have borrowed '{Title}' by {Author}.");
+            }
+            else
+            {
+                Console.WriteLine($"Sorry, '{Title}' is currently unavailable.");
+            }
         }
     }
     
