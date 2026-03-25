@@ -15,6 +15,9 @@ foreach (var book in library.DisplayBooks)
     Console.WriteLine($"Title: {book.Title}, Author: {book.Author}, Available Copies: {book.AvailableCopies}");
 }
 
-
-// borrowing books
-
+Console.WriteLine("Books After Borrowing");
+Console.WriteLine("Books In Library");
+foreach (var book in library.DisplayBooks)
+{
+    Console.WriteLine($"Title: {book.Title}, Author: {book.Author}, Available Copies: {book.AvailableCopies}");
+}
