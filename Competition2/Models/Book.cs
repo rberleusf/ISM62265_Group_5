@@ -8,6 +8,14 @@ namespace Competition2.Models
         public int AvailableCopies { get; set; }
         public int Id { get; set; }
 
+        public Book(string title, string author, string isbn, int availableCopies)
+        {
+            Title = title;
+            Author = author;
+            ISBN = isbn;
+            AvailableCopies = availableCopies;
+        }
+
         public void BorrowBook()
         {
             // if (AvailableCopies > 0)
