@@ -19,6 +19,19 @@ namespace Competition2.Models
             DisplayBooks.Add(book);
         }
 
+        public void BorrowBook(People patron, Book book)
+        {
+            if (book.AvailableCopies > 0)
+            {
+                book.AvailableCopies--;
+                Console.WriteLine($"{patron.Name} borrowed '{book.Title}'.");
+            }
+            else
+            {
+                Console.WriteLine($"Sorry, '{book.Title}' is currently unavailable.");
+            }
+        }
+
     }
 
 }
