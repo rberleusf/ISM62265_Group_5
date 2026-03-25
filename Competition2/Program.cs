@@ -14,25 +14,37 @@ library.DisplayPatrons.Add(new Student("Akhil", "akhil@usf.edu", "S001", "Busine
 library.DisplayPatrons.Add(new Student("Sandeep", "sandeep@usf.edu", "S002", "Information Systems", "2025"));
 library.DisplayPatrons.Add(new Staff("Grandon Gill", "grandon@usf.edu", "ST001", "Librarian", "Library Services"));
 
+var Sandeep = library.DisplayPatrons[1];
+var Akhil = library.DisplayPatrons[0];
 
+var businessInsightsBook = library.DisplayBooks[1];
+var analyticsAction = library.DisplayBooks[2];
 
-Console.WriteLine("Books In Library");
+Console.WriteLine("Books In Library:");
 foreach (var book in library.DisplayBooks)
 {
     Console.WriteLine($"Title: {book.Title}, Author: {book.Author}, Available Copies: {book.AvailableCopies}");
 }
 
-Console.WriteLine("");
-Console.WriteLine("\nPatrons in Library");
+Console.WriteLine("\nPatrons in Library:");
 foreach (var patron in library.DisplayPatrons)
 {
     Console.WriteLine($"Name: {patron.Name}, ID: {patron.Id}");
 }
 
 Console.WriteLine("");
-Console.WriteLine("Books After Borrowing");
-Console.WriteLine("Books In Library");
+Console.WriteLine("Borrowing Books...");
+library.BorrowBook(Sandeep, businessInsightsBook);
+library.BorrowBook(Akhil, analyticsAction);
+
+
+Console.WriteLine("");
+Console.WriteLine("Books After Borrowing:");
+Console.WriteLine("Books In Library:");
 foreach (var book in library.DisplayBooks)
 {
     Console.WriteLine($"Title: {book.Title}, Author: {book.Author}, Available Copies: {book.AvailableCopies}");
 }
+
+
+
